@@ -9,6 +9,7 @@
  */
 int main(void)
 {
+	size_t charSize = sizeof(char);
 	size_t intSize = sizeof(int);
 	size_t longIntSize = sizeof(long int);
 	size_t longLongIntSize = sizeof(long long int);
