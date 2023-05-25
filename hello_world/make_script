@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# make multiple scripts at once
+file=~/files
+while read FILE
+do
+	touch "${FILE}"
+done < files
+echo '#!/bin/bash' | tee -a *-*
+chmod u+x *-*
