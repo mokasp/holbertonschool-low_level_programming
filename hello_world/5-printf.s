@@ -1,9 +1,9 @@
-	.file	"4-puts.c"
+	.file	"5-printf.c"
 	.text
 	.section	.rodata
 	.align 8
 .LC0:
-	.string	"\"Programming is like building a multilingual puzzle"
+	.string	"with proper grammar, but the outcome is a piece of art,"
 	.text
 	.globl	main
 	.type	main, @function
