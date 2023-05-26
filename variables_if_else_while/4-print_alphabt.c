@@ -22,8 +22,10 @@ int main(void)
 		{
 			;
 		}
-		else 
+		else
+		{
 			putchar(x);
+		}
 	}
 	printf("\n");
 	return (0);
