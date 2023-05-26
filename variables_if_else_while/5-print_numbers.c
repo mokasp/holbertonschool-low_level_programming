@@ -10,13 +10,12 @@
 int main(void)
 {
 	int x = 48;
-	int n = 10;
 
 	while (x <= 57)
 	{
 		putchar(x);
 		++x;
 	}
-	putchar(n);
+	printf("\n");
 	return (0);
 }
