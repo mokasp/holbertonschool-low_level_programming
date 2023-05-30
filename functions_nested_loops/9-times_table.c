@@ -25,7 +25,6 @@ void times_table(void)
 				q = z / 10;
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
 				_putchar(q + '0');
 				_putchar(w + '0');
 			}
