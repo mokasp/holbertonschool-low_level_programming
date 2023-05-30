@@ -13,33 +13,19 @@ void jack_bauer(void)
 	w = 0;
 	x = 0;
 
-	while (w <= 24)
+	while (w <= 23)
 	{
-		if (w <= 9)
+		while(x <= 59)
 		{
-			_putchar('0');
+			_putchar(w / 10 + '0');
 			_putchar(w % 10 + '0');
 			_putchar(':');
+			_putchar(x / 10 + '0');
+			_putchar(x % 10 + '0');
+			_putchar('\n');
+			x++;
 		}
-		else if (w >= 10 && w <= 19)
-		{
-			_putchar('1');
-			_putchar(w % 10 + '0');
-			_putchar(':');
-		}
-		else if (w >= 20 && w <= 24)
-		{
-			_putchar('2');
-			_putchar(w % 10 + '0');
-			_putchar(':');
-		}
+		x = 0;
 		w++;
-	}
-
-	while (x <= 59)
-	{
-		_putchar(x / 10 + '0');
-		_putchar(w % 10 + '0');
-		_putchar('\n');
 	}
 }
