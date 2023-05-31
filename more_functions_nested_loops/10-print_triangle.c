@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - print triangle
- * @n: number of hashtags
+ * @size: size of triangle
  *
  * Return: Always 0 (Success)
  */
@@ -19,7 +19,7 @@ void print_triangle(int size)
 			{
 				_putchar(' ');
 			}
-			for(z = 1; z <= x; z++)
+			for (z = 1; z <= x; z++)
 			{
 				_putchar('#');
 			}
