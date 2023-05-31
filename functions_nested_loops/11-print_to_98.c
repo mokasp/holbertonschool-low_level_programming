@@ -3,7 +3,6 @@
 
 /**
  * print_to_98 - count to 98
- *
  * @n: start number
  *
  * Return: Always 0 (Success)
@@ -13,28 +12,25 @@ void print_to_98(int n)
 {
 	int x;
 
-	for (x = n; x > 98; x--)
+	if (n < 99)
 	{
-		if (x > 98)
+		for (x = n; x < 99; x++)
 		{
-			printf("%d, ", x);
-		}
-		else
-		{
-			printf("%d", x);
-			printf("\n");
+			if (x != 98)
+				printf("%d, ", x);
+			else
+				printf("%d", x);
 		}
 	}
-	for (x = n; x <= 98; x++)
+	else
 	{
-		if (x < 98)
+		for (x = n; x > 97; x--)
 		{
-			printf("%d, ", x);
-		}
-		else
-		{
-			printf("%d", x);
-			printf("\n");
+			if (x != 98)
+				printf("%d, ", x);
+			else
+				printf("%d", x);
 		}
 	}
+	printf("\n");
 }
