@@ -20,14 +20,18 @@ int _atoi(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
+		{
 			if (x < 0)
 				x = -x;
 			else
 				x--;
+		}
 		if (s[i] >= '0' && s[i] <= '9')
+		{
 			y = s[i] - 48;
 			z = z * 10 + y;
 			i++;
+		}
 		else if (z == 0)
 			i++;
 		else
