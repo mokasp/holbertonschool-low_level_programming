@@ -1,19 +1,22 @@
 #include "main.h"
 
 /**
- * _strcmp - copy a string
- * @dest: second string
- * @src: first string
- * @n: size of src
+ * _strcmp - compare two strings
+ * @s1: first string
+ * @s2: second string
  *
  * Return: Always 0.
  */
 int _strcmp(char *s1, char *s2)
 {
-	if (s1 == s2)
-		return (0);
-	else if (s1 < s2)
-		return (-15);
+	int x;
+
+	x = s1[0] - s2[0];
+
+	if (x < 0)
+		return (x);
+	else if (x > 0)
+		return (x);
 	else
-		return (15);
+		return (0);
 }
