@@ -4,6 +4,7 @@
 /**
  * *_strchr - searches the first occurence of char c
  * @s: string
+ * @c: character tp be searched
  *
  * Return: Always 0.
  */
