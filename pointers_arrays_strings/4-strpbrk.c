@@ -1,35 +1,34 @@
 #include "main.h"
-#include <stdbool.h>
+#include <stddef.h>
 
 /**
- * _strspn - prints number of matching bytes
+ * *_strpbrk - finds first chara in s1 that matches any chara in str2
  * @s: initial string
  * @accept: string to compare to
  *
  * Return: Always 0.
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	int i, q, w, x;
+	int i, q;
 
-	x = 0;
+	if (s == NULL || accept == NULL)
+	{
+		return (NULL);
+	}
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		w = 0;
 		for (q = 0; accept[q] != '\0'; q++)
 		{
-			if (s[i] == accept[q])
+			if (*s == accept[q])
 			{
-				x++;
-				w = 1;
+				return (s);
 			}
 		}
-		if (w == 0)
-		{
-			return (x);
-		}
+		s++;
 	}
-	return (x);
+	return (NULL);
 }
+
