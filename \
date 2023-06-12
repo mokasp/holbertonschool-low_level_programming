@@ -1,0 +1,19 @@
+Update program 07
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	deleted:    4-rev_array
+#	deleted:    5-string_toupper
+#	deleted:    6-main.c
+#	renamed:    6-cap -> 7-1337
+#	new file:   7-leet.c
+#	new file:   7-main.c
+#	modified:   main.h
+#
+# Changes not staged for commit:
+#	deleted:    ../hi
+#
