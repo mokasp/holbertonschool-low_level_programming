@@ -11,19 +11,21 @@
 
 int main(int argc, char *argv[])
 {
-	int result;
+	int i, result;
 	char string[] = "Error";
 
-	result = atoi(argv[1]) * atoi(argv[2]);
-
-	if (argc == 3)
+	for (i = 0; i < 1; i++)
 	{
-		printf("%d\n", result);
-	}
-	else
-	{
-		printf("%s\n", string);
-		return (1);
+		if (argc == 3)
+		{
+			result = atoi(argv[1]) * atoi(argv[2]);
+			printf("%d\n", result);
+		}
+		else
+		{
+			printf("%s\n", string);
+			return (1);
+		}
 	}
 	return (0);
 }
