@@ -15,8 +15,6 @@ int main(int argc, char *argv[])
 	int i;
 	unsigned int x, sum;
 	char *w;
-	char str1[] = "Error";
-	char str2[] = "0";
 
 	if (argc > 1)
 	{
@@ -29,7 +27,7 @@ int main(int argc, char *argv[])
 
 				if (w[x] < 48 || w[x] > 57)
 				{
-					printf("%s\n", str1);
+					printf("Error\n");
 					return (1);
 				}
 			}
@@ -42,7 +40,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("%s\n", str2);
+		printf("0\n");
 	}
 
 	return (0);
