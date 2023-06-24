@@ -31,6 +31,12 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	dup = (char *)malloc(sizeof(char) * i + j + 1);
+
+	if (dup == NULL)
+	{
+		return (NULL);
+	}
+
 	p = dup;
 
 	while (*s1)
