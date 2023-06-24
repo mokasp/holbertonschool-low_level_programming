@@ -30,6 +30,9 @@ char *str_concat(char *s1, char *s2)
 
 	p = (char *)malloc(sizeof(char) * x + w + 1);
 
+	if (p == NULL)
+		return (NULL);
+
 	i = 0;
 
 	while (s1[i] != '\0')
