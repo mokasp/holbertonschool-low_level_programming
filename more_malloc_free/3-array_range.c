@@ -23,9 +23,10 @@ int *array_range(int min, int max)
 	if (mem == NULL)
 		return (NULL);
 
-	for (i = 0; i <= max - min; i++)
+	for (i = 0; min <= max; i++)
 	{
-		mem[i] = min++;
+		mem[i] = min;
+		min++;
 	}
 
 	return (mem);
