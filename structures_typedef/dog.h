@@ -8,6 +8,7 @@
  * @owner: owner of dog, char pointer
  */
 
+/* defines a new type of structure */
 typedef struct dog
 {
 	char *name;
