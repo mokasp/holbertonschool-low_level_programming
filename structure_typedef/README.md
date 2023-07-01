@@ -1,1 +1,0 @@
-learning structures with dog :)
