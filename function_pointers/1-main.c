@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "function_pointers.h"
+
 /**
  * print_elem - prints an integer
  * @elem: the integer to print
