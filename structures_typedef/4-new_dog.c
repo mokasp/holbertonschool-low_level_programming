@@ -43,7 +43,7 @@ char *_strdup(char *elmt)
  * new_dog - creates a new dog
  * @name: name of dog
  * @age: age of dog
- * @owner:
+ * @owner: owner of dog
  * owner of dog
  *
  * Return: (new dog)
@@ -72,8 +72,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-
-	free(new_dog);
 
 	return (new_dog);
 }
