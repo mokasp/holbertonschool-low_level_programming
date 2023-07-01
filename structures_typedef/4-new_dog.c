@@ -14,15 +14,12 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog_t *d;
-
-	if (d != NULL)
-	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
-	}
-	else
+	if (dog_t == NULL)
 		return (NULL);
-	return (d);
+
+	dog_t->name = name;
+	dog_t->age = age;
+	dog_t->owner = owner;
+
+	return (dog_t);
 }
