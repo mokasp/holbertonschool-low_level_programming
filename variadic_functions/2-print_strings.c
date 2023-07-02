@@ -2,6 +2,7 @@
 
 /**
  * print_strings - prints whole stings
+ * @separator: string in between the strings
  * @n: number of strings
  *
  * Return: void
@@ -17,7 +18,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (separator == NULL)
 		separator = "";
-	
+	if (n == 0)
+		printf("\n");
+
 	for (i = 0; i < n; i++)
 	{
 		x = va_arg(ptr, char *);
