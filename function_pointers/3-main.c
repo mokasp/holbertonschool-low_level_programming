@@ -8,7 +8,6 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	char *ops;
 	int (*op)(int, int);
 
 	if (argc != 4)
@@ -19,8 +18,8 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num1 = atoi(argv[2]);
-	ops = get_op_func(argv[2]);
-	if (ops = NULL)
+	op = get_op_func(argv[2]);
+	if (op = NULL)
 	{
 		printf("Error\n");
 		exit(99);
