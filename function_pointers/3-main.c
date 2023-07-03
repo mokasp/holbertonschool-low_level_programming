@@ -7,11 +7,10 @@
  */
 int main(void)
 {
-	int a, b, op;
+	int a, b;
 	int calc;
+	char *ops;
 
-	op = atoi(s);
-
-	calc = get_op_func(op, a, b);
+	calc = get_op_func(ops);
 	printf("%d\n", calc);
 }
