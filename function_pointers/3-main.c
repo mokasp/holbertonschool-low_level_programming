@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, num1, num2, len, result;
+	int i, num1, num2, result;
 	char *ops;
 
 	if (argc != 4)
@@ -20,11 +20,8 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	ops = argv[2];
 
-	if (ops == '/' || ops == '%' && num2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
+	result = get_op_function(ops);
+	printf("%d\n", result);
 
 	return (0);
 }
