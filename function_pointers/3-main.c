@@ -22,6 +22,18 @@ int main(int argc, char *argv[])
 
 	result = op(num1, num2);
 
+	if (op == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	if (num3 == 0 && op == op_div || op == op_mod)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
 	printf("%d\n", result);
 
 	return (0);
