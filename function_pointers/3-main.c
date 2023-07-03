@@ -28,12 +28,6 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((num2 == 0) && (argv[2] == "/" || argv[2] == "%"))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
 	printf("%d\n", result);
 
 	return (0);
