@@ -7,9 +7,11 @@
  */
 int main(void)
 {
-	int a, b;
+	int a, b, op;
 	int calc;
 
+	op = atoi(s);
+
 	calc = get_op_func(op, a, b);
-	return(calc);
+	printf("%d\n", calc);
 }

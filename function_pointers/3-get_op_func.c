@@ -17,6 +17,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+
+	if (s != ops)
+		return (NULL);
+
+	while (*s)
+	{
+		i = get_op_func(+);
+
+	}
 	int i;
-	return ();
+	return (get_op_func);
 }
