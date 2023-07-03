@@ -5,12 +5,26 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-	int a, b;
-	int calc;
-	op_t ops;
+	int i, num1, num2, len, result;
+	char *ops;
 
-	calc = get_op_func(ops);
-	printf("%d\n", calc);
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	ops = argv[2];
+
+	if (argv[2] == '/' || argv[2] == '%' && argv[3] == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	return (0);
 }
