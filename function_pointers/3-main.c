@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	ops = argv[2];
 
-	result = get_op_function(ops);
+	result = get_op_func(ops);
 	printf("%d\n", result);
 
 	return (0);
