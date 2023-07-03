@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((num2 == 0) && (op == op_div || op == op_mod))
+	if ((num2 == 0) && (op == ops[4].f || op == ops[5].f))
 	{
 		printf("Error\n");
 		exit(100);
