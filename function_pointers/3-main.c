@@ -9,7 +9,7 @@ int main(void)
 {
 	int a, b;
 	int calc;
-	char *ops;
+	op_t ops;
 
 	calc = get_op_func(ops);
 	printf("%d\n", calc);
