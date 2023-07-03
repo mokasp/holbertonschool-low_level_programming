@@ -7,7 +7,9 @@
  */
 int main(void)
 {
+	int a, b;
 	int calc;
-	calc = get_op_func(ops, a, b)
+
+	calc = get_op_func(op, a, b);
 	return(calc);
 }
