@@ -8,6 +8,7 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
+	char *ops;
 	int (*op)(int, int);
 
 	if (argc != 4)
