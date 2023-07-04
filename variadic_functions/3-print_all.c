@@ -41,7 +41,7 @@ void string(va_list hm)
 	if (str == NULL)
 		printf("(nil");
 
-	printf("%s",str);
+	printf("%s", str);
 }
 
 /**
@@ -70,11 +70,11 @@ void print_all(const char * const format, ...)
 	
 	va_start(hm, format);
 
-	while (format && format[i]);
+	while (format != NULL && format[i]);
 	{
 		while (type[j].w)
 		{
-			if (format[i] == type[j].w)
+			if (format[i] == *type[j].w)
 			{
 				printf("%s", sep);
 				type[j].f(hm);
