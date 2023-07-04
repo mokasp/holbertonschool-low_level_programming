@@ -36,10 +36,12 @@ void flt(va_list hm)
  */
 void string(va_list hm)
 {
-	if (s == NULL)
+	str = va_arg(hm, char *)
+
+	if (str == NULL)
 		printf("(nil");
 
-	printf("%s", va_arg(hm, char *));
+	printf("%s",str);
 }
 
 /**
