@@ -28,7 +28,7 @@ void character(va_list hm)
  */
 void flt(va_list hm)
 {
-	float flt = va_arg(hm, float);
+	double flt = va_arg(hm, double);
 
 	printf("%f", flt);
 }
