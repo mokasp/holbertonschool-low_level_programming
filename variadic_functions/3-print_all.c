@@ -75,7 +75,7 @@ void print_all(const char * const format, ...)
 	};
 	int i, j;
 	char *sep;
-	
+
 	sep = "",
 	i = 0;
 	j = 0;
