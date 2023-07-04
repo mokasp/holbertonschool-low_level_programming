@@ -10,6 +10,7 @@
 void integer(va_list hm)
 {
 	int integer = va_arg(hm, int);
+
 	printf("%d", integer);
 }
 
@@ -27,7 +28,8 @@ void character(va_list hm)
 	printf("%c", character);
 }
 
-/* flt - prints floats
+/**
+ * flt - prints floats
  * @hm variadic arg list
  *
  * Return: void
@@ -71,14 +73,11 @@ void print_all(const char * const format, ...)
 		{ "f", flt },
 		{ "s", string },
 	};
-	
 	int i, j;
 	char *sep;
-	
 	sep = "",
 	i = 0;
 	j = 0;
-	
 	va_start(hm, format);
 
 	while (format != NULL && format[i])
