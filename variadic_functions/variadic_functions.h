@@ -14,7 +14,7 @@
 typedef struct types
 {
 	char *w;
-	char(*f)(va_list hm);
+	void (*f)(va_list hm);
 } form_t;
 
 int sum_them_all(const unsigned int n, ...);
