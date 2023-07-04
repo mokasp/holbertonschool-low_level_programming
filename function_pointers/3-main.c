@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	result = op(num1, num2);
 
-	if (op == NULL)
+	if (strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(99);
