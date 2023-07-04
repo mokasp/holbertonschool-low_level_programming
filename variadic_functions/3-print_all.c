@@ -1,10 +1,12 @@
 #include "variadic_functions.h"
 
 /**
+ * integer - prints ints
+ * @hm: variadic arg list
  *
- *
- *
+ * Return: void
  */
+
 void integer(va_list hm)
 {
 	int integer = va_arg(hm, int);
@@ -12,20 +14,25 @@ void integer(va_list hm)
 }
 
 /**
+ * character - prints chars
+ * @hm: variadic arg list
  *
- *
- *
+ * Return: void
  */
+
 void character(va_list hm)
 {
 	char character = va_arg(hm, int);
+
 	printf("%c", character);
 }
-/*
+
+/* flt - prints floats
+ * @hm variadic arg list
  *
- *
- *
+ * Return: void
  */
+
 void flt(va_list hm)
 {
 	double flt = va_arg(hm, double);
@@ -34,9 +41,10 @@ void flt(va_list hm)
 }
 
 /**
+ * string - prints strings
+ * @hm variadic arg list
  *
- *
- *
+ * Return: void
  */
 void string(va_list hm)
 {
@@ -63,7 +71,7 @@ void print_all(const char * const format, ...)
 		{ "f", flt },
 		{ "s", string },
 	};
-
+	
 	int i, j;
 	char *sep;
 	
