@@ -36,7 +36,7 @@ void flt(va_list hm)
  */
 void string(va_list hm)
 {
-	str = va_arg(hm, char *)
+	char *str = va_arg(hm, char *)
 
 	if (str == NULL)
 		printf("(nil");
@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 	
 	va_start(hm, format);
 
-	while (format != NULL && format[i]);
+	while (format != NULL && format[i])
 	{
 		while (type[j].w)
 		{
