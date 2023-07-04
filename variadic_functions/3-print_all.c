@@ -10,11 +10,11 @@
 void print_all(const char * const format, ...)
 {
 	form_t type[] = {
-		{'i', integer},
-		{'c', character},
-		{'f'', flt},
-		{'s', *str},
-		{'\0', NULL}
+		{"i", integer},
+		{"c", character},
+		{"f"', flt},
+		{"s", *str},
+		{NULL, NULL}
 	};
 	int i, j;
 	char *sep;
