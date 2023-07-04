@@ -18,7 +18,7 @@ void integer(va_list hm)
  */
 void character(va_list hm)
 {
-	char character = va_arg(hm, char);
+	char character = va_arg(hm, int);
 	printf("%c", character);
 }
 /*
