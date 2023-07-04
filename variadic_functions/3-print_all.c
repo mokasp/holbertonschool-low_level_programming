@@ -7,7 +7,7 @@
  */
 void integer(va_list hm)
 {
-	printf("%d", va_arg(ptr, int));
+	printf("%d", va_arg(hm, int));
 }
 
 /**
@@ -15,9 +15,9 @@ void integer(va_list hm)
  *
  *
  */
-void character(va_list)
+void character(va_list hm)
 {
-	printf("%c", va_args(ptr, char));
+	printf("%c", va_args(hm, char));
 }
 /*
  *
@@ -26,7 +26,7 @@ void character(va_list)
  */
 void flt(va_list hm)
 {
-	printf("%f", va_args(ptr, float));
+	printf("%f", va_args(hm, float));
 }
 
 /**
@@ -39,7 +39,7 @@ void *str(va_list hm)
 	if (s == NULL)
 		printf("(nil");
 	
-	printf("%s", va_args(ptr, char *));
+	printf("%s", va_args(hm, char *));
 }
 
 /**
