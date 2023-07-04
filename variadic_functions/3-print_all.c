@@ -62,7 +62,6 @@ void print_all(const char * const format, ...)
 		{ "c", character },
 		{ "f", flt },
 		{ "s", string },
-		{ NULL, NULL }
 	};
 
 	int i, j;
