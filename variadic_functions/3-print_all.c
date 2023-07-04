@@ -50,17 +50,17 @@ void string(va_list hm)
  */
 void print_all(const char * const format, ...)
 {
+	va_list hm;
 	form_t type[] = {
-		{"i", integer},
-		{"c", character},
-		{"f"', flt},
-		{"s", string},
-		{NULL, NULL}
+		{ "i", integer },
+		{ "c", character },
+		{ "f"', flt },
+		{ "s", string },
+		{ NULL, NULL }
 	};
 
 	int i, j;
 	char *sep;
-	va_list ap;
 	
 	sep = "",
 	i = 0;
