@@ -30,7 +30,7 @@ void character(va_list hm)
 
 /**
  * flt - prints floats
- * @hm variadic arg list
+ * @hm: variadic arg list
  *
  * Return: void
  */
@@ -44,7 +44,7 @@ void flt(va_list hm)
 
 /**
  * string - prints strings
- * @hm variadic arg list
+ * @hm: variadic arg list
  *
  * Return: void
  */
@@ -75,6 +75,7 @@ void print_all(const char * const format, ...)
 	};
 	int i, j;
 	char *sep;
+	
 	sep = "",
 	i = 0;
 	j = 0;
