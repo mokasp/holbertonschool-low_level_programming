@@ -89,5 +89,6 @@ void print_all(const char * const format, ...)
 		j = 0;
 		++i;
 	}
+	printf("\n");
 	va_end(hm);
 }
