@@ -11,9 +11,9 @@
  * @f: the function associated
  */
 
-typedef struct w
+typedef struct types
 {
-	char w;
+	char *w;
 	char(*f)(va_list hm);
 } form_t;
 
