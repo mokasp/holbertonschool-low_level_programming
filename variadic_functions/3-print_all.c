@@ -54,7 +54,7 @@ void print_all(const char * const format, ...)
 	form_t type[] = {
 		{ "i", integer },
 		{ "c", character },
-		{ "f"', flt },
+		{ "f", flt },
 		{ "s", string },
 		{ NULL, NULL }
 	};
