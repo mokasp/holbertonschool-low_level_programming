@@ -34,7 +34,7 @@ void flt(va_list hm)
  *
  *
  */
-void *str(va_list hm)
+void string(va_list hm)
 {
 	if (s == NULL)
 		printf("(nil");
@@ -54,13 +54,13 @@ void print_all(const char * const format, ...)
 		{"i", integer},
 		{"c", character},
 		{"f"', flt},
-		{"s", *str},
+		{"s", string},
 		{NULL, NULL}
 	};
 
 	int i, j;
 	char *sep;
-	va_list hm;
+	va_list ap;
 	
 	sep = "",
 	i = 0;
@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 			++j;
 		}
 		j = 0;
-		i++;
+		++i;
 	}
 	va_end(hm);
 }
