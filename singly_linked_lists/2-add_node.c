@@ -10,7 +10,7 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	struct list_t new_node;
+	struct list_t *new_node;
 
 	new_mode = strdup(str);
 	free(new_node);
