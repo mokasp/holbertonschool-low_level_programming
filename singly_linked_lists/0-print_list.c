@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list: prints all elements of a singly linked list
+ * print_list - prints all elements of a singly linked list
  * @h: singly linked list
  *
  * Return: number of nudes
@@ -10,7 +10,7 @@
 size_t print_list(const list_t *h)
 {
 	int node_cnt;
-	
+
 	node_cnt = 0;
 
 	while (h != NULL)
