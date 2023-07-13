@@ -15,7 +15,7 @@ size_t print_list(const list_t *h)
 
 	if (h == NULL)
 	{
-		list_t[0].str = "(nil)";
+		h->str = "(nil)";
 	}
 
 	while (h != NULL)
