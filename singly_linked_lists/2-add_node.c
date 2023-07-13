@@ -24,10 +24,10 @@ list_t *add_node(list_t **head, const char *str)
 		free(new_str);
 		free(new_node);
 	}
+	new_node->str = new_str;
 	new_node->len = new_len;
 	new_node->next = (*head);
+	*head = new
 
-	printf("%u", new_len);
-
-	return (new_node->next);
+	return (head);
 }
