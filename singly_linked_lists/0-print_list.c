@@ -12,8 +12,11 @@ size_t print_list(const list_t *h)
 	int node_cnt;
 	list_t *node;
 	
-	head = h;
+	node = h;
 	node_cnt = 0;
+
+	if (node == NULL)
+		printf("[0] (nil)");
 
 	while (node != NULL)
 	{
@@ -21,9 +24,6 @@ size_t print_list(const list_t *h)
 		node = h->next;
 		node_cnt++;
 	}
-	
-	else
-		printf("[0] (nil)");
 
 	return (node_cnt);
 }
