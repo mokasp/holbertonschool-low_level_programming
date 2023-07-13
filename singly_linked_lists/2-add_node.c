@@ -10,11 +10,15 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	head = strdup(str);
-	free(head);
+	struct list_t new_node;
 
-	if (head == NULL)
+	new_mode = strdup(str);
+	free(new_node);
+
+	if (new_node == NULL)
 		return (NULL);
+
+	
 
 	return (head);
 }
