@@ -4,7 +4,7 @@
  * print_strings - prints whole stings
  * @separator: string in between the strings
  * @n: number of strings
- *
+ * testing the waters
  * Return: void
  */
 
