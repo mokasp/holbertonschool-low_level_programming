@@ -11,7 +11,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t **new_head;
-	struct list_t *new_node;
+	struct list_s *new_node;
 	
 	new_node->str = strdup(str);
 	free(new_node->str);
@@ -21,5 +21,5 @@ list_t *add_node(list_t **head, const char *str)
 
 	new_head = &new_node;
 
-	return (head);
+	return (new_head);
 }
