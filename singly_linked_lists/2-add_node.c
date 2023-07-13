@@ -10,15 +10,15 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	struct list_t *new_node;
-
+	const *new_node;
+	
 	new_node = strdup(str);
 	free(new_node);
 
 	if (new_node == NULL)
 		return (NULL);
 
-	
+	head = &new_node;
 
 	return (head);
 }
