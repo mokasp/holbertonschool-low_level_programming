@@ -10,7 +10,7 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	const *new_node;
+	char *new_node;
 	
 	new_node = strdup(str);
 	free(new_node);
