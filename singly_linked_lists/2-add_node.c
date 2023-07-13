@@ -10,7 +10,8 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	struct list_t *new_node;
+	struct list_t **new_head;
+	char *new_node;
 	
 	new_node = strdup(str);
 	free(new_node);
@@ -18,7 +19,6 @@ list_t *add_node(list_t **head, const char *str)
 	if (new_node == NULL)
 		return (NULL);
 
-	head = &new_node;
-
+	new_head = &new_node
 	return (head);
 }
