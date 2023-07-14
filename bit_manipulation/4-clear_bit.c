@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * set_bit - sets value of a bit at a given index value to 1
+ * clear_bit - sets value of bi to 0 at given index
  * @n: pointer to number
  * @index: index
  *
  * Return: void
  */
 
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int bit;
 
