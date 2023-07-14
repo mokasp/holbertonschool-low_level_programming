@@ -4,7 +4,7 @@
  * binary_to_uint - convert binary to unsigned int
  * @b: string of binary
  *
- * return: unsigned int
+ * Return: unsigned int
  */
 
 unsigned int binary_to_uint(const char *b)
@@ -18,8 +18,11 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
-	while (b[i] == '0' || b[i] == '1')
+	while (*b)
 	{
+		if (b[i] != '0' || b[i] != 1)
+			return (0);
+
 		conv <<= 1;
 		conv += b[i] - '0';
 		i++;
