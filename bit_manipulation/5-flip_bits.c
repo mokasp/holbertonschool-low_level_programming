@@ -29,7 +29,7 @@ unsigned int count_bits(unsigned int x)
 	while (x > 0)
 	{
 		count++;
-		n &= (n - 1);
+		x &= (x - 1);
 	}
 	return (count);
 }
