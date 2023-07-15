@@ -20,7 +20,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
  * Return: number of bits needed to flip bits
  */
 
-unsigned int count_bits(unsigned int x);
+unsigned int count_bits(unsigned int x)
 {
 	int count;
 
