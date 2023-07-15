@@ -10,8 +10,9 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	return (set_bits(n ^ m));
+	return (count_bits(n ^ m));
 }
+
 /**
  * count_bits - counts bits
  * @x: second number
