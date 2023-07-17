@@ -7,12 +7,12 @@
  * Return: void
  */
 
-void free_listint2(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *current;
 	listint_t *tmp;
 
-	current = head;
+	current = (*head);
 
 	while (current != NULL)
 	{
@@ -20,5 +20,5 @@ void free_listint2(listint_t *head)
 		current = current->next;
 		free(tmp);
 	}
-	head = NULL;
+	(*head) = NULL;
 }
