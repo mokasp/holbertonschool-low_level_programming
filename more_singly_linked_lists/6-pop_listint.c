@@ -7,7 +7,7 @@
  * Return: head node's data
  */
 
-int free_listint(listint_t *head)
+int pop_listint(listint_t *head)
 {
 	if (head == NULL)
 		return (0);
