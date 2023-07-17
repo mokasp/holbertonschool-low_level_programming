@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - prints all elements of a singly linked list
+ * print_listint - prints all elements of a singly linked list
  * @h: singly linked list
  *
  * Return: number of nodes
