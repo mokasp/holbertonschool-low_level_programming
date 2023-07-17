@@ -1,16 +1,16 @@
 #include "lists.h"
 
 /**
- * free_list - frees a linked list
+ * free_listint - frees a linked list
  * @head: pointer to first element
  *
  * Return: void
  */
 
-void free_list(list_t *head)
+void free_listint(listint_t *head)
 {
-	list_t *current;
-	list_t *tmp;
+	listint_t *current;
+	listint_t *tmp;
 
 	current = head;
 
@@ -18,7 +18,6 @@ void free_list(list_t *head)
 	{
 		tmp = current;
 		current = current->next;
-		free(tmp->str);
 		free(tmp);
 	}
 	head = NULL;
