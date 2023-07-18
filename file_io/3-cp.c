@@ -18,20 +18,21 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY);
-
-	rd = read(file_from, buff, 1024);
-	if (rd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	wr = write(file_to, buff, rd);
-	if (wr != rd)
+
+	while (rd = read(file_from, buff, 1024))
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
-		exit(99);
-	}
+		if (rd == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		wr = write(file_to, buff, rd);
+		if (wr != rd)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
+			exit(99);
+		}
 	close(file_from);
 	close(file_to);
 	if (file_from == -1 || file_to == -1)
