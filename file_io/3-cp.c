@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
-	while (rd = read(file_from, buff, 1024))
+	while ((rd = read(file_from, buff, 1024) != -1)
 	{
 		if (rd == -1)
 		{
