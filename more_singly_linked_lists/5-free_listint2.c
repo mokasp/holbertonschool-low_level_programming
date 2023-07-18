@@ -22,5 +22,6 @@ void free_listint2(listint_t **head)
 		free(current);
 		tmp = tmp->next;
 	}
+	free(current);
 	(*head) = NULL;
 }
