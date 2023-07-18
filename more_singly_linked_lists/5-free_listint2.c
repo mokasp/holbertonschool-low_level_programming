@@ -18,8 +18,8 @@ void free_listint2(listint_t **head)
 		return;
 	while (current != NULL)
 	{
-		tmp = current
-		current  current->next;
+		tmp = current;
+		current = current->next;
 		free(tmp);
 	}
 	free(current);
