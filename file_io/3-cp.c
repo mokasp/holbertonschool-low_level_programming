@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
-	while ((rd = read(file_from, buff, 1024) != -1)
+	while ((rd = read(file_from, buff, 1024)) != -1)
 	{
 		if (rd == -1)
 		{
@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
 			exit(99);
 		}
+	}
 	close(file_from);
 	close(file_to);
 	if (file_from == -1 || file_to == -1)
