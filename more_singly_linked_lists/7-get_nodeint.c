@@ -1,12 +1,11 @@
 #include "lists.h"
 /**
- * pop_listint - deletes head node of a singly linked list
+ * get_nodeint_at_index - gets node at a certain index in a linked list
  * @head: pointer to first element
  * @index: index of node
  *
- * Return: head node's data
+ * Return: node at a specific index
  */
-
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *tmp;
