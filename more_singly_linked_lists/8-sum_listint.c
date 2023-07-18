@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * um_listint - finds sum of all data of a singly linked list
+ * sum_listint - finds sum of all data of a singly linked list
  * head: pointer to first element
  *
  * Return: sum of all data
