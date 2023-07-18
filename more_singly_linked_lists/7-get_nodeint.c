@@ -7,7 +7,7 @@
  * Return: head node's data
  */
 
-listint_t *get_nodeint_at_index(listint_t *head, usigned int index)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *tmp;
 	int cnt;
