@@ -22,11 +22,12 @@ int main(int argc, char *argv[])
 	file_from = open(arg[1], O_RDONLY);
 
 	rd = read(file_from, buff, 1024);
-	if (file_from == NULL)
+	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", args[1]);
 		exit(98);
 	}
+	file_to = open(arg[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR);
 	wr = write(file_to, buff, rd);
 	if (wr == -1)
 	{
