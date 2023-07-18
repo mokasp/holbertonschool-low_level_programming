@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * sum_listint - finds sum of all data of a singly linked list
- * head: pointer to first element
+ * @head: pointer to first element
  *
  * Return: sum of all data
  */
