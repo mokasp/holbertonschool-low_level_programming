@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		while (rd > 0)
+		while (rd != -1)
 		{
 			wr = write(file_to, buff, rd);
 			if (wr != rd)
