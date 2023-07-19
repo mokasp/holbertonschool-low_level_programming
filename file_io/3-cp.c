@@ -30,19 +30,17 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	while ((rd = read(file_from, buff, 1024)) > 0)
+	rd = read(file_from, buff, 1024)
+	if (rd == -1)
 	{
-		if (rd == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
-		wr = write(file_to, buff, rd);
-		if (wr != rd)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	wr = write(file_to, buff, rd);
+	if (wr != rd)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	close1 = close(file_from);
 	if (close1 == -1)
