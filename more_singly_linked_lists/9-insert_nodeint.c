@@ -32,9 +32,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new_node;
 	}
 	else
-		*tmp = *head;
+		tmp = *head;
 	while (--idx)
 		tmp = tmp->next;
+	new_node->n = new_int;
 	new_node->next = tmp->next;
 	tmp->next = new_node;
 	return (new_node);
