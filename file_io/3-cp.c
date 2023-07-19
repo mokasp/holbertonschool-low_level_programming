@@ -29,6 +29,11 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
+	if ((rd == read(file_from, buff, 1024)) <= 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 
 	while ((rd = read(file_from, buff, 1024)) > 0)
 	{
@@ -39,10 +44,6 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	if ((rd == read(file_from, buff, 1024)) <= 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
 	}
 	close1 = close(file_from);
 	if (close1 == -1)
