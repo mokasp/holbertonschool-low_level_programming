@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - inserts a new node at a given position
+ * delete_nodeint_at_index - 000
  * @head: pointer to first element
  * @idx:
  * @n: n
@@ -8,18 +8,29 @@
  * Return: sum of all data
  */
 
-int sum_listint(listint_t *head)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *ptr;
-	int sum;
+	listint_t *current, *tmp;
+	unsigned int i;
 
-	sum = 0;
-	ptr = head;
-
-	while (ptr != NULL)
+	current = *head;
+	i = 0;
+	if (current == NULL)
+		return (-1);
+	if (index == 0)
 	{
-		sum += ptr->n;
-		ptr = ptr->next;
+		*head = (*head)->next;
+		free(current);
+		return (1)
 	}
-	return (sum);
+
+	while (i < (index - 1))
+	{
+		i++;
+		current = current->next;
+	}
+	tmp = current->next;
+	current->next = tmp->next;
+	free(tmp);
+	return (1);
 }
