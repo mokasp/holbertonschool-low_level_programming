@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, rd, wr, close1, close2;
+	int file_from, file_to, rd, wr;
 	char buff[1024];
 
 	rd = 1024;
@@ -57,10 +57,10 @@ int main(int argc, char *argv[])
  */
 void closefunc(int file)
 {
-	int close;
+	int closer;
 
-	close = close(file);
-	if (close == -1)
+	closer = close(file);
+	if (closer == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 		exit(100);
