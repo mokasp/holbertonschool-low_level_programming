@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, rd, wr close1, close2;
+	int file_from, file_to, rd, wr, close1, close2;
 	char buff[1024];
 
 	if (argc != 3)
