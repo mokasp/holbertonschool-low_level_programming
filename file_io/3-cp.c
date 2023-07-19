@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, rd, wr;
+	int file_from, file_to, rd, wr close1, close2;
 	char buff[1024];
 
 	if (argc != 3)
@@ -18,9 +18,19 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR);
+	if (file_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
+		exit(99);
+	}
 
-	while ((rd = read(file_from, buff, 1024)) != -1)
+	while ((rd = read(file_from, buff, 1024)) > 0)
 	{
 		if (rd == -1)
 		{
@@ -34,11 +44,16 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	close(file_from);
-	close(file_to);
-	if (file_from == -1 || file_to == -1)
+	close1 = close(file_from);
+	if (close1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+		exit(100);
+	}
+	close2 = close(file_to);
+	if (close2 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 	return (0);
