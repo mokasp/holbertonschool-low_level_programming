@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((rd = read(file_from, buff, 1024)) > 0)
+	while ((rd = read(file_from, buff, 1024)) > 0)
 	{
 		wr = write(file_to, buff, rd);
 		if (wr != rd)
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	else
+	if ((rd == read(from_file, buff, 1024)) <= 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
