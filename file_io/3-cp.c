@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
 	int file_from, file_to, rd, wr, close1, close2;
 	char buff[1024];
 
+	rd = 1024;
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -29,22 +31,19 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	rd = read(file_from, buff, 1024);
-	if (rd == -1)
+	while (rd = 1024);
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	else
-	{
-		while (rd != -1)
+		rd = read(file_from, buff, 1024);
+		if (rd == -1)
 		{
-			wr = write(file_to, buff, rd);
-			if (wr != rd)
-			{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		wr = write(file_to, buff, rd);
+		if (wr != rd)
+		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
-			}
 		}
 	}
 	close1 = close(file_from);
