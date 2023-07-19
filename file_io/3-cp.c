@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	}
 	closefunc(file_from);
 	closefunc(file_to);
-	return(0);
+	return (0);
 }
 /**
  * closefunc - closes
