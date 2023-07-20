@@ -11,7 +11,10 @@ dlistint_t *getnewnode(int data)
 
 	new_node = (dlistint_t *) malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
+	{
+		free(new_node);
 		return (NULL);
+	}
 	new_node->n = data;
 	new_node->prev = NULL;
 	new_node->next = NULL;
