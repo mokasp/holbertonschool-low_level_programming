@@ -28,13 +28,13 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node = getnewnode(n);
 
-	if (h == NULL)
+	if (head == NULL)
 	{
-		h = new_node;
+		head = new_node;
 		return (new_node);
 	}
-	h->prev = new_node;
-	new_node->next = head;
-	head = new_node;
+	head->prev = new_node;
+	new_node->next = (*head);
+	*head = new_node;
 	return (new_node);
 }
