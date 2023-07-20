@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * getnewnode - create a new node
- * @n: date to put in node
+ * @data: data to put in node
  *
  * Return: address of new element
  */
