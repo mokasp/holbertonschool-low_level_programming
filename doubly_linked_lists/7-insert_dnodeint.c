@@ -24,9 +24,9 @@ dlistint_t *getnewnode(int data)
  *
  * Return: size of dll
  */
-int getSize(dlistint_t *node)
+unsigned int getSize(dlistint_t *node)
 {
-	int size = 0;
+	unsigned int size = 0;
 
 	while (node != NULL)
 	{
@@ -45,7 +45,7 @@ int getSize(dlistint_t *node)
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	int size = getSize(*h);
+	unsigned int size = getSize(*h);
 	dlistint_t *new_node, *tmp, *tmp2;
 
 	if (idx < 0 || size < idx)
