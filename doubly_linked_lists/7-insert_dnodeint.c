@@ -1,11 +1,11 @@
 #include "lists.h"
 /**
- * getnewnode - create a new node
+ * getnewnode3 - create a new node
  * @data: data to put in node
  *
  * Return: address of new element
  */
-dlistint_t *getnewnode(int data)
+dlistint_t *getnewnode3(int data)
 {
 	dlistint_t *new_node;
 
@@ -57,7 +57,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	else
 	{
 		tmp = *h;
-		new_node = getnewnode(n);
+		new_node = getnewnode3(n);
 		while (--idx)
 			tmp = tmp->next;
 		tmp2 = tmp->next;

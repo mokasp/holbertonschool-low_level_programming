@@ -1,11 +1,11 @@
 #include "lists.h"
 /**
- * getnewnode - create a new node
+ * getnewnode2 - create a new node
  * @data: data to put in node
  *
  * Return: address of new element
  */
-dlistint_t *getnewnode(int data)
+dlistint_t *getnewnode2(int data)
 {
 	dlistint_t *new_node;
 
@@ -26,7 +26,7 @@ dlistint_t *getnewnode(int data)
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *new_node = getnewnode(n);
+	dlistint_t *new_node = getnewnode2(n);
 	dlistint_t *last = *head;
 
 	if (new_node == NULL)
