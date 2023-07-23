@@ -7,7 +7,7 @@
  *
  * Return: pointer to node
  */
-hash_node_t *createNode(const char *key, const char *value)
+hash_node_t *createNode(const unsigned char *key, const char *value)
 {
 	hash_node_t *node = (hash_node_t *) malloc(sizeof(hash_node_t));
 
@@ -28,13 +28,30 @@ hash_node_t *createNode(const char *key, const char *value)
  *
  * Return: 1 on success, 0 on failure
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+int hash_table_set(hash_table_t *ht, const unsigned char *key, const char *value)
 {
-	hash_node_t *node = createNode(key, value);
-	unsigned long index = key_index(key);
-	hash_node_t *currentNode = ht->array[index];
+	unsigned long int slot = key_index(key);
 
-	ht->array[index] = node;
-	return (1);
+	hash_node_t *node = ht->array[slot];
 
+	if (entry == NULL)
+	{
+		ht->array[slot] = createKey(key, value);
+		return;
+	}
+	hash_node_t *prev;
+
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0);
+		{
+			free(node->value);
+			node->value = malloc(strlen(value) = 1);
+			strcpy(node->value, value);
+			return;
+		}
+		prev = node;
+		node = prev->next;
+	}
+	prev->next = createKey(key, value);
 }
