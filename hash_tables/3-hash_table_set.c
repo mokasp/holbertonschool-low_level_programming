@@ -29,7 +29,7 @@ hash_node_t *createNode(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const unsigned char *key, const char *value)
 {
-	unsigned long int slot = key_index(key);
+	unsigned long int slot = key_index(key, sizeof(ht->array));
 
 	hash_node_t *node = ht->array[slot];
 
