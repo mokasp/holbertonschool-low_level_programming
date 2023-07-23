@@ -10,6 +10,7 @@
 hash_node_t *createNode(char *key, char *value)
 {
 	hash_node_t *node = (hash_node_t *) malloc(sizeof(hash_node_t));
+
 	if (node == NULL)
 		return (NULL);
 	node->key = (char *) malloc(strlen(key) + 1);
@@ -28,6 +29,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i;
 	hash_table_t *table = (hash_table_t *) malloc(sizeof(hash_table_t));
+
 	if (table == NULL)
 		return (NULL);
 	table->size = size;
