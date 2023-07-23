@@ -7,16 +7,15 @@
  *
  * Return: pointer to node
  */
-hash_node_t *createNode(char *key, char *value)
+hash_node_t *createNode(const char *key, const char *value)
 {
-	hash_node_t *node = (hash_node_t *) malloc(sizeof(hash_node_t));
+	hash_node_t *node = (hash_node_t *) malloc(sizeof(node));
 
-	if (node == NULL)
-		return (NULL);
-	node->key = (char *) malloc(strlen(key) + 1);
-	node->value = (char *) malloc(strlen(key) + 1);
+	node->key = malloc(strlen(key) + 1);
+	node->value = malloc(strlen(value) + 1);
 	strcpy(node->key, key);
 	strcpy(node->value, value);
+	node->next = NULL;
 	return (node);
 }
 /**
