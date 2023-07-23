@@ -7,7 +7,7 @@
  *
  * Return: pointer to node
  */
-hash_node_t *createNode(char *key, char *value)
+hash_node_t *createNode(const char *key, const char *value)
 {
 	hash_node_t *node = (hash_node_t *) malloc(sizeof(hash_node_t));
 
@@ -30,7 +30,7 @@ hash_node_t *createNode(char *key, char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t node = createNode(key, value);
+	hash_node_t node; = createNode(key, value);
 	int index = key_index(key);
 	hash_node_t currentNode = ht->array[index];
 
