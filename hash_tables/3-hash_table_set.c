@@ -30,27 +30,28 @@ hash_node_t *createNode(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int slot = key_index(key, sizeof(ht->array));
+	hash_node_t *prev;
 
 	hash_node_t *node = ht->array[slot];
 
 	if (node == NULL)
 	{
 		ht->array[slot] = createNode(key, value);
-		return;
+		return (1);
 	}
-	hash_node_t *prev;
-
+	
 	while (node != NULL)
 	{
-		if (strcmp(node->key, key) == 0);
+		if (strcmp(node->key, key) == 0)
 		{
 			free(node->value);
 			node->value = malloc(strlen(value) = 1);
 			strcpy(node->value, value);
-			return;
+			return (0);
 		}
 		prev = node;
 		node = prev->next;
 	}
 	prev->next = createKey(key, value);
+	return (1);
 }
