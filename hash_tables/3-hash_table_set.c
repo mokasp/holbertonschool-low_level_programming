@@ -13,7 +13,7 @@ hash_node_t *createNode(const unsigned char *key, const char *value)
 
 	if (node == NULL)
 		return (NULL);
-	node->key = (char *) malloc(strlen(key) + 1);
+	node->key = (const unsigned char *) malloc(strlen(key) + 1);
 	node->value = (char *) malloc(strlen(key) + 1);
 	strcpy(node->key, key);
 	strcpy(node->value, value);
