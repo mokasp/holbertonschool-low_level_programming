@@ -33,9 +33,9 @@ int hash_table_set(hash_table_t *ht, const unsigned char *key, const char *value
 
 	hash_node_t *node = ht->array[slot];
 
-	if (entry == NULL)
+	if (node == NULL)
 	{
-		ht->array[slot] = createKey(key, value);
+		ht->array[slot] = createNode(key, value);
 		return;
 	}
 	hash_node_t *prev;
