@@ -52,6 +52,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		prev = node;
 		node = prev->next;
 	}
-	prev->next = createKey(key, value);
+	prev->next = createNode(key, value);
 	return (1);
 }
