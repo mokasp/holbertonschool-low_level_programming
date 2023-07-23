@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(node->key, key) == 0)
 		{
 			free(node->value);
-			node->value = malloc(strlen(value) = 1);
+			node->value = malloc(strlen(value) + 1);
 			strcpy(node->value, value);
 			return (0);
 		}
