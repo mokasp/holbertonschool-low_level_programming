@@ -28,7 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(node->value);
 			node->value = malloc(strlen(value) + 1);
 			strcpy(node->value, value);
-			return;
+			return (1);
 		}
 		prev = node;
 		node = prev->next;
