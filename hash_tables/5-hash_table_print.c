@@ -9,7 +9,7 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i, f;
-	hash_table_t *tmp;
+	hash_node_t *tmp;
 
 	if (ht == NULL)
 		return;
@@ -24,8 +24,9 @@ void hash_table_print(const hash_table_t *ht)
 				if (f == 1)
 					printf(", ");
 				printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
+				f = 1;
+				tmp = tmp->next;
 			}
-			f = 1;
 		}
 	}
 	printf("}\n");
