@@ -10,7 +10,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int slot;
-	hash_table_t *node;
+	hash_node_t *node;
 	if (node == NULL)
 		return (NULL);
 	while (node != NULL)
