@@ -46,6 +46,7 @@ unsigned int getSize(dlistint_t *node)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 0;
+	unsigned int size = getSize(*h);
 	dlistint_t *new_node, *tmp;
 	
 	tmp = *h;
