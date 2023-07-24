@@ -46,40 +46,31 @@ unsigned int getSize(dlistint_t *node)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 0;
-	unsigned int size = getSize(*h);
-	dlistint_t *new_node, *tmp, *tmp2;
+	dlistint_t *new_node, *tmp;
 	
-	new_node = getnewnode3(n);
 	tmp = *h;
 
-	if ((*h) == NULL)
-	{
-		new_node = getnewnode3(n);
-		*h = new_node;
-		return (new_node);
-	}
+	if (idx == 0)
+		return (add_dnodeint(h, n));
 
-	if (size < idx)
-		return (NULL);
-	else if (idx == size)
-		add_dnodeint_end(h, n);
 	else
-	{
-		while (tmp != NULL && i < idx)
+	{		
+		while (tmp != NULL)
 		{
-			tmp2 = tmp;
-			tmp = tmp->next;
-			i++;
-		}
+			new_node = getnewnode3(n);
+			new_node->next = tmp->next;
+			new_node->prev = tmp;
 
-		if (tmp != NULL)
-		{
-			new_node->next = tmp;
-			new_node->prev = tmp2;
-			tmp2->next = new_node;
-			tmp->prev = new_node;
+			if (tmp->next != NULL)
+			{
+				tmp->next = new_node;
+				tmp->prev = new_node;
+			}
+			tmp->next = new_node;
 			return (new_node);
 		}
+		tmp = tmp->next;
+		i++;
 	}
 	return (NULL);
 }
