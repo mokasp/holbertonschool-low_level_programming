@@ -9,12 +9,21 @@
  */
 hash_node_t *createNode(const char *key, const char *value)
 {
-	hash_node_t *node = (hash_node_t *) malloc(sizeof(node));
+	hash_node_t *node = (hash_node_t *) malloc(sizeof(hash_node_t));
 
-	node->key = malloc(strlen(key) + 1);
+	if (node == NULL)
+		return (0);
+	node->key = malloc(strlen(value) + 1);
 	node->value = malloc(strlen(value) + 1);
 	strcpy(node->key, key);
 	strcpy(node->value, value);
+	if (node->key == NULL || node->value == NULL)
+	{
+		free(node->key);
+		free(node->value);
+		free(node);
+		return (0);
+	}
 	node->next = NULL;
 	return (node);
 }
